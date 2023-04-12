@@ -1,6 +1,5 @@
-let js  = 'amazing';
-if (js === 'amazing') {
-    alert('Javascript is fun!');
-}
+let country = 'Ecuador';
+let continent = 'America';
+let population = '18.00 million';
 
-console.log(40+50+60-30);
+console.log("I live in " + country + ", located in " + continent + ", which has a population of around " + population);
