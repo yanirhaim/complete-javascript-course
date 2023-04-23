@@ -26,4 +26,41 @@ const restaurant = {
       close: 24,
     },
   },
+
+  orderDelivery: function({starterIndex, mainIndex, time, address}){
+    console.log(`Your order has been recieved! You ordered ${this.starterMenu[starterIndex]} with ${this.mainMenu[mainIndex]}`);
+  }
+
 };
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Bosques de Castilla',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+// Array DeStructuring 
+const arr = [1,2,3];
+const [x,y,z] = arr;
+console.log(x,y,z);
+
+const [first, , second] = restaurant.categories;
+console.log(first, second);
+
+// Object DeStructuring
+const {name, openingHours, categories} = restaurant;
+//console.log(name, openingHours, categories);  
+const {name: restauran_name, openingHours: hours} = restaurant;
+//console.log(restauran_name, hours);
+const {menu = [], starterMenu: starter = []} = restaurant;
+console.log(menu, starter);
+
+// Nested Objects
+const {fri: {open:o, close:c}} = openingHours;
+console.log(o, c);
+
+
+// SpreadOperator
+const array = [1,2,4];
+const second_arr = [5,6, ...array];
